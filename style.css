@@ -509,12 +509,75 @@ body {
     }
 
     .language-metric {
-        gap: 0.75rem;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+        gap: 0.35rem 0.75rem;
+        align-items: center;
     }
 
     .language-name {
-        width: 90px;
-        font-size: 0.85rem;
+        grid-column: 1;
+        grid-row: 1;
+        width: auto;
+        font-size: 0.9rem;
+    }
+
+    .language-percent {
+        grid-column: 2;
+        grid-row: 1;
+        width: auto;
+        text-align: right;
+        font-size: 0.9rem;
+    }
+
+    .language-progress-bar {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+        height: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    #search-form {
+        flex-direction: column;
+        gap: 0.5rem;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    #search-input {
+        background: var(--bg-surface);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        width: 100%;
+        padding: 0.85rem 1rem;
+    }
+
+    #search-form button {
+        width: 100%;
+        padding: 0.85rem 1.75rem;
+        border-radius: 12px;
+    }
+
+    .recent-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        margin-top: 1.25rem;
+    }
+
+    .clear-btn {
+        align-self: flex-end;
+    }
+
+    .repos-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 }
 
