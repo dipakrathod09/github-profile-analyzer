@@ -13,6 +13,10 @@
     <main class="app-container">
 
         <header class="search-section">
+            <div class="brand-header">
+                <h1>GitHub Profile Analyzer</h1>
+                <p>Analyze developer profiles, top repositories, and programming skills instantly.</p>
+            </div>
             <form id="search-form">
                 <input type="text" id="search-input" placeholder="Enter a GitHub username..." required
                     aria-label="Search GitHub username" />
@@ -23,6 +27,16 @@
                 <button id="clear-history-btn" class="clear-btn hidden">Clear History</button>
             </div>
         </header>
+
+        <div id="initial-state" class="status-message welcome-card">
+            <h2>Let's analyze some profiles!</h2>
+            <p>Enter any GitHub username in the search bar above to generate a full visual report of their public activity.</p>
+            <div class="features-preview">
+                <div class="feature-item">📊 <span>Language Metrics</span></div>
+                <div class="feature-item">⭐ <span>Top Repositories</span></div>
+                <div class="feature-item">💾 <span>Search History</span></div>
+            </div>
+        </div>
 
         <div id="loading-state" class="status-message hidden">
             <p>Fetching developer data...</p>

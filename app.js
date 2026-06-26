@@ -6,6 +6,8 @@ const clearBtn = document.getElementById('clear-history-btn');
 let searchHistory = JSON.parse(localStorage.getItem('gitHistory')) || [];
 
 async function fetchUserProfile(username) {
+    const initialState = document.getElementById('initial-state');
+    if (initialState) initialState.classList.add('hidden');
     loadingState.classList.remove('hidden');
     errorState.classList.add('hidden');
     profileDashboard.classList.add('hidden');
