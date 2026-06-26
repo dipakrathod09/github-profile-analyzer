@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app-container">
+
+        <header class="search-section">
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Enter a GitHub username..." required
+                    aria-label="Search GitHub username" />
+                <button type="submit">Analyze</button>
+            </form>
+            <div class="recent-container">
+                <div id="recent-searches" class="recent-searches"></div>
+                <button id="clear-history-btn" class="clear-btn hidden">Clear History</button>
+            </div>
+        </header>
+
+        <div id="loading-state" class="status-message hidden">
+            <p>Fetching developer data...</p>
+        </div>
+
+        <div id="error-state" class="status-message hidden">
+            <h2 id="error-message">Oops! User not found.</h2>
+            <p>Check the spelling and try again.</p>
+        </div>
+
+        <section id="profile-dashboard" class="hidden">
+
+            <article class="profile-card">
+                <img id="user-avatar" src="" alt="Developer Avatar" class="avatar" />
+
+                <div class="profile-details">
+                    <h1 id="user-name"></h1>
+                    <a id="user-handle" href="" target="_blank" rel="noopener noreferrer"></a>
+                    <p id="user-bio"></p>
+
+                    <div class="stat-badges">
+                        <span class="badge">Followers: <strong id="user-followers">0</strong></span>
+                        <span class="badge">Following: <strong id="user-following">0</strong></span>
+                        <span class="badge">Public Repos: <strong id="user-repos-count">0</strong></span>
+                    </div>
+                </div>
+            </article>
+
+            <section class="repositories-section">
+                <h2>Top Repositories</h2>
+
+                <div id="repos-container" class="repos-grid">
+
+                </div>
+            </section>
+
+            <section class="languages-section">
+                <h2>Most Used Languages</h2>
+                <div id="languages-container" class="languages-grid">
+                </div>
+            </section>
+
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+    <footer class="app-footer">
+        <span id="rate-display">API Status: Ready</span>
+    </footer>
+
+</body>
+
+</html>
