@@ -10,6 +10,7 @@ A highly polished, responsive, and visually stunning client-side web application
 - **Language Analytics:** Processes repository data using array aggregation methods to calculate and display the percentage distribution of your top 5 programming languages with brand-color progress bars.
 - **API Rate Limit Guard:** Inspects `x-ratelimit` response headers to track remaining requests and gracefully prompts warning displays if GitHub's rate limit is hit.
 - **Local Storage Search History:** Stores the last 5 unique searches locally, providing interactive glass-pill search tags and a dedicated "Clear History" button.
+- **User-Friendly Landing Page:** Greets visitors with an onboarding card highlighting app capabilities before they search, preventing blank states.
 - **Clean Responsive Layout:** Built from scratch using CSS Grid and Flexbox to look amazing on mobile, tablet, and desktop screens.
 
 ## Project Structure
@@ -39,8 +40,11 @@ Since this is a client-side vanilla web app, no compilers or bundlers are requir
 
 ## GitHub Pages Deployment
 
-This project is perfectly suited for free hosting on **GitHub Pages**:
+This project is configured for automated hosting on **GitHub Pages**:
 
-1. Push this repository to GitHub.
-2. Navigate to **Settings > Pages** in your repository dashboard.
-3. Select `main` branch as your build source and click **Save**.
+1. Push your code to GitHub.
+2. Deploy directly via the pre-configured deployment branch:
+   ```bash
+   git push origin main:gh-pages
+   ```
+3. GitHub will automatically detect the `gh-pages` branch and publish your site live at `https://<your-username>.github.io/github-profile-analyzer/` within a few moments.
